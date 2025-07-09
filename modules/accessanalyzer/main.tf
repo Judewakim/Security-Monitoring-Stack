@@ -21,6 +21,13 @@ resource "aws_accessanalyzer_analyzer" "accessanalyzer-internal" {
   }
 }
 
-
+## External use only 
+# resource "aws_accessanalyzer_analyzer" "accessanalyzer-external" {
+#  analyzer_name = "amaani-accessanalyzer-external"
+#  type          = "ACCOUNT"
+#}
 
 #generate IAM policy based access history
+
+
+
