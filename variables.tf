@@ -28,3 +28,21 @@ variable "enable_sns" {
   default = true
 }
 
+#######ACCESS ANALYZER######
+variable "accessanalyzer_type" {
+    description = "Set type to ACCOUNT or ORGANIZATION"
+    type = string
+    default = "ACCOUNT"
+}
+
+variable "accessanalyzer_exclusionaccountids" {
+  description = "List of AWS account IDs to exclude from unused access findings"
+  type        = list(string)
+  default     = []
+}
+
+variable "accessanalyzer_exclusionresourcetags" {
+  description = "List of tag maps to exclude from unused access findings"
+  type        = list(map(string))
+  default     = []
+}
